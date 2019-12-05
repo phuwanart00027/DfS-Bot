@@ -12,7 +12,7 @@ class BotController extends Controller
         $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '7665f26dba096fd0e617181e0ee8269f']);
 
         $content = file_get_contents('php://input');
-        // $events = json_decode($content, true);
+        $events = json_decode($content, true);
         // if (!is_null($events['events'])) {
         //     if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
         //         $text = $event['source']['userId'];
