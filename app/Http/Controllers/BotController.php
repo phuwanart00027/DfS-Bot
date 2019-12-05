@@ -21,8 +21,9 @@ class BotController extends Controller
                     'type' => 'text',
                     'text' => $text
                 ];
-                $response = $bot->replyText($replyToken, $text);
-                return $response;
+                $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello');
+                $response = $bot->replyMessage($replyToken, $textMessageBuilder);
+                return [$response];
             }
             else{
                 return '555';
