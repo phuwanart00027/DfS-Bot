@@ -35,7 +35,7 @@ class BotController extends Controller
                     // message text
                     $messages = [
                         'type' => 'text',
-                        'text' => $text
+                        'text' => '5555',
                     ];
 
                     // Make a POST Request to Messaging API to reply to sender
