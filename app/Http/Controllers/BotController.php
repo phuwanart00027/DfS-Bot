@@ -19,6 +19,10 @@ class BotController extends Controller
         if(!is_null($events)){
             $replyToken = $events->events[0]->replyToken;
         }
+        else{
+            $replyToken = '';
+        }
+
 
         $textMessageBuilder = new TextMessageBuilder(json_encode($events));
 
