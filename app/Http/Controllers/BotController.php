@@ -16,7 +16,7 @@ class BotController extends Controller
         // if (!is_null($events['events'])) {
         //     if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
         //         $text = $event['source']['userId'];
-                $replyToken = $event['replyToken'];
+                $replyToken = $events[0]['replyToken'];
         //         $messages = [
         //             'type' => 'text',
         //             'text' => $text
