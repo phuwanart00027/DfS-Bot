@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class BotController extends Controller
 {
-    public function botNotify(Request $request){
+    public function botNotify(){
         $access_token = 'nyYah13xqVYr7kkYCpER2mSRTHlamvnscrfxN/HafqG8EnR3U8jxNB/SIFUNQyRBDo1sl6yf5r9pCZ1gjwWlY9fge0k65Bsc5ZvhIK//sX8nJp5mwNJu1WVBRG1RClWhVMWCzGvC5sGn/rk5W57FuAdB04t89/1O/w1cDnyilFU=';
 
         // Get POST body content

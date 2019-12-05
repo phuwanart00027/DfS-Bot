@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/notify', 'BotController@botNotify');
+Route::post('/notify', 'BotController@botNotify');
