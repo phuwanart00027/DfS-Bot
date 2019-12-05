@@ -12,26 +12,27 @@ class BotController extends Controller
         $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => '7665f26dba096fd0e617181e0ee8269f']);
 
         $content = file_get_contents('php://input');
-        $events = json_decode($content, true);
-        if (!is_null($events['events'])) {
-            if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
-                $text = $event['source']['userId'];
+        // $events = json_decode($content, true);
+        // if (!is_null($events['events'])) {
+        //     if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
+        //         $text = $event['source']['userId'];
                 $replyToken = $event['replyToken'];
-                $messages = [
-                    'type' => 'text',
-                    'text' => $text
-                ];
+        //         $messages = [
+        //             'type' => 'text',
+        //             'text' => $text
+        //         ];
                 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello');
                 $response = $bot->replyMessage($replyToken, $textMessageBuilder);
-                return [$response];
-            }
-            else{
-                return '555';
-            }
 
-        }
-        else{
-            return '999';
-        }
+                return [$response];
+        //     }
+        //     else{
+        //         return '555';
+        //     }
+
+        // }
+        // else{
+        //     return '999';
+        // }
     }
 }
